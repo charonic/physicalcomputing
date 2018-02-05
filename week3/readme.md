@@ -1,5 +1,5 @@
-[Video Link]: https://youtu.be/Sf8oKlcvKY8 
-![Project 2 Image](physicalcomputing/week3/IMG_1347)
+ https://youtu.be/Sf8oKlcvKY8 
+![Project 2 Image](IMG_1347.jpg)
 
 # Project 2 Process:
    Setup so that all my gear is close at hand and the book is open.
