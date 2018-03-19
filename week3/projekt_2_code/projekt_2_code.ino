@@ -12,13 +12,8 @@ void loop() {
   // put your main code here, to run repeatedly:
 switchState = digitalRead(2);
 
-if (switchState == LOW) {
-digitalWrite(3,HIGH); // GREEN ON
-digitalWrite(4,LOW);  // RED OFF
-digitalWrite(5,LOW);  // RED OFF
-  
-}
-else {
+if (switchState == LOW) 
+ {
   digitalWrite(3,LOW);
   digitalWrite(4,LOW);
   digitalWrite(5,HIGH);

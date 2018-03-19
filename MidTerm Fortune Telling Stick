@@ -1,0 +1,30 @@
+Fortune Telling with Sticks!
+
+•	Item List:
+o	Tilt Sensor
+	220 resisters
+o	LCD Monitor 
+	10k ?? Resister
+
+	
+	
+Premise:
+	Based off Chinese stick fortune telling, the user will tilt the sensor and then receive a random fortune that will read out on the LCD monitor.
+
+Coding thoughts:
+1.	Make an array that contains X amount of fortunes.
+2.	Make the tilt sensor an INPUT that that causes an element of the array to be randomly chosen.
+3.	Once the element is chosen, it will be displayed on the LED
+Actual Process:
+1.	Going through the book, it’ll be easy to split this into two parts
+a.	Tilt Sensor
+# The simplest part of this project, I can take the coding used in Project 8: Digital Hourglass.
+##Declare a switchPin, a constant variable, the pin it’ll start on is 8.
+#	Create two variables
+##	Int switchState = 0; will cover the switchstate received
+##	Int prevSwitchState = 0; will allow the former variable to be compared, which should tell the rest of the Arduino to trigger a fortune.
+#	Void setup(){
+##	pinMode(switchPin,INPUT);} should declare that the variable switchPin will be an input.
+#	Void loop(){
+##	switchState = digitalRead(switchPin);} reads if the switch has been tilted.
+#	LCD
