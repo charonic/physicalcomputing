@@ -1,5 +1,13 @@
 Fortune Telling with Sticks!
 
+![BreadboardSkeleton](images/Step1.jpg)
+![BreadBoardSkeleton1](images/Step2.jpg)
+![BreadBoardSkeleton1](images/Step3.jpg)
+![BoxOne](images/Step4.jpg)
+
+![ReviseBox](images/revised1.jpg)
+![ReviseBox](images/revised2.jpg)
+![ReviseBox](images/revised3.jpg)
 # Item List:
 *	Tilt Sensor
 *	220 ohm resisters
@@ -45,7 +53,7 @@ Going through the book, it’ll be easy to split this into two parts
    if(switchState != prevSwitchState){} should run the lcd code one the switchState has been activated.
    prevSwitchState = switchState; the last part of the loop code will remember the statue of the switchState so that the next loop has something to compare the switchState with. 
  # LCD
-    The LCD project in chapter 11  is pretty much the project I was thinking about, but with LCD code instead of an array.
+    The LCD project in chapter 11 was a huuuge help here.
  * #include <LiquidCrystal.h>  there is an actual library for the LCD, so gotta slap that in there.
  * LiquidCrystal lcd(12,11,5,4,3,2); the numbers here are just to tell the arduino what pins it'll be using.
  * int reply; this will basically hold the chosen reply.
@@ -70,14 +78,21 @@ Going through the book, it’ll be easy to split this into two parts
 Seems like the switch() is an array? I'm not quite sure why it's displayed like this.
 
 
+# The Box:
+Making a new box was fine once I found a big ol' headphones box with accompanying styrofoam, just required some constant cutting of the foam. 
+
+
 # Surprises
     I had started the project determined to make it work with limited space, so I didn't even consider using the potentiometer. 30 minutes later of frustrated reading I realized that the screen contrast was waaaaay too high. So the code functioned, the wiring was fine, it just didn't display. Always read why people added components kids.
     
 # To the future!
     Getting a wider/longer LCD would be nice, 32 characters split between two rows is pretty inelegant.
-    Finding a better box would be solid, also working with longer wiring or better adhesive's is a must, soldering solves the former, resources the latter.
+    setting a base contrast so that i don't need a potentiometer if possible
+    Working with extended wire so I can keep the tilt-o-meter inside teh box so you can actually just shake the box.
+        That being said: find a way to make it so the tilt-o-meter will register a change once and then freeze.
+    
+ Here's the link to the completeo box: https://youtu.be/Isddt8jWkn4
+Here's a link to the video before I found a box: https://youtu.be/3BSpNflJNSc of the first one
+
     
     
-    
-    
-    Here's a link to the video: https://youtu.be/3BSpNflJNSc
