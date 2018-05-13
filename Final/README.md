@@ -5,7 +5,7 @@ Final Documentation
 Dropbead, short and simple and it hearkens to a very commonly played variant of Mancala in the U.S..
 
 
-![boxedup](/Images/boxedup.png)
+![boxedup](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/boxedup.JPG)
 
 # Overview
 This project revolves around building a Mancala (subtype Kalah) game using Arduino. If the base system can run, then steps can be taken to eventually make this project more acessible. It is the intent of the project in the long term to imitate the feel of Mancala with appropriate sounds, but the current focus is getting the base game flow down.
@@ -17,7 +17,7 @@ A cheeky answer is that my dreams are bigger than my hands can hold. The real an
 
 # Form factor/ideal size?
 Ideally it would be relatively small, currently I'm thinking about as long as a PS Vita, but alas it's boxy and clunky as it's attached to a breadboard.
-![skeleton](/Images/buttonworks.png)
+![skeleton](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/buttonworks.JPG)
  ## Input
     There are two, the potentiometer and the button. The former will dictate the cursor in the LCD, the latter will fire off the code that moves the beads.
     In a game, a player will be watching an LCD, and will decide which hole they'll move the beads through. Once they decided they'll use the potentiometer to move from hole to hole, once they've reached the desired hole, they'll press the button. The button will fire code that will move the "beads" from hole to hole, automating the process.
@@ -59,7 +59,7 @@ Instead of buttons, use a potentiometer for selection, truthfully it was suggest
 ##### Pre void setup:
 
 
-![Presetup](/Images/Presetup.png)
+![Presetup](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/Presetup.PNG)
 First, gonna slap in the LCD Library with #include <LiquidCrystal.h>, then you have to tell it what pins you're going to use to interact with the LCD, for this we'll use the following: LiquidCrystal lcd(12,11,5,4,3,2);. 
  * LCD 12: Pin 4
  * LCD 11: Pin ~5
@@ -85,7 +85,7 @@ bool gameOver: if the game is over this will be set to false.
 int mancounter:used primarily in the mancalaGame, it defines the current "hole" used in the game state.
 
 ##### void setup(){}
-![setupcode](/Images/setup.png)
+![setupcode](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/setup.PNG)
 
 lcd.begin(16,1); tell the LCD that it'll be firing off on 16 columns for 1 rows.
 
@@ -97,7 +97,7 @@ pinMode(12, OUTPUT); pin 12 will be confirmed as an output, in this case it's th
 
 
 ##### void loop(){}
-![gameboardcode](/Images/gameboard.png)
+![gameboardcode](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/gameboard.PNG)
    potVal = analogRead(potPin); - used primarily in the Serial, it allowed to check if the potentiometer itself worked.
   selector = map(analogRead(A0), 0, 1023, 1, 13); - mapped the potentiometer to values 1-13, which in this case would be the mancalagame board, array elements 0 and 14 are gated to prevent the player from accidently selecting them and emptying them into holes. 
 
@@ -128,7 +128,7 @@ Mancounter++ increments the counter so the lcd will print in series.
 the last line sets the counter back to the start, if the counter is incremented beyond 15 (the scope of the array), it'll reset to 0.
 
 
-![buttoncode](/Images/buttonfiring.png)
+![buttoncode](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/buttonfiring.PNG)
 switchRead = digitalRead(confirmButton);
   if (switchRead == 1) {
 
@@ -170,7 +170,7 @@ This is the part of the code that didn't even trigger properly, as the code it i
 
 
 
-![whowon?](/Images/whowon.png)
+![whowon?](https://github.com/charonic/physicalcomputing/blob/master/Final/Images/whowon.PNG)
 void whoWon() { /*function definition not allowed before {*/
 
   if (mancalaGame[1] == 0 && mancalaGame[2] == 0 && mancalaGame[3] == 0 && mancalaGame[4] == 0 && mancalaGame[5] == 0 && mancalaGame[6] == 0) {
